@@ -1,0 +1,193 @@
+header {
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .8)), url(../img/paper.jpg) fixed center no-repeat;
+    background-size: 100% 100%;
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+}
+
+h1 {
+    color:coral;
+}
+
+.courses-link {
+    color:coral;
+    border-color: coral;
+}
+
+.banner-heading{
+    font-size: 5rem;
+}
+
+.banner-heading:first-letter{
+    font-family: 'Sacramento', cursive;
+    font-size: 10rem;
+    margin-right: 20px;
+}
+
+#pencil{
+    position: relative;
+    animation: pencilAnimation 3s infinite;
+    animation-direction: alternate-reverse;  
+}
+
+@keyframes pencilAnimation {
+    0% {
+        transform: scale(1);
+        /* left:0 */
+    }
+    25% {
+        transform: scale(1.1);
+        /* left:50px; */
+    }
+    50% {
+        transform: scale(1.05);
+        /* right:150px; */
+    }
+    75% {
+        transform: scale(1.1);
+        /* left:0; */
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* common title */
+.common-title{
+    display: inline-block;
+    font-size: 3rem;
+    font-weight: 500;
+    text-shadow: 2px 2px 2px #aaa;
+    transition: all .5s;
+}
+
+.common-title:first-letter{
+    font-family: 'Sacramento', cursive;
+    font-size: 5rem;
+    margin-top: 10px;
+    font-style: normal;
+}
+
+.common-title:hover{
+    transform: translate(-5px, -3px);
+    text-shadow: 2px 5px 20px #aaa;
+}
+
+.courses {
+    position: relative;
+    height: 50vh;
+}
+
+.course {
+    width: 55%;
+    position: absolute;
+    box-shadow: 5px 5px 5px #444;
+    border-right: 5px solid #777;
+    border-bottom: 10px solid  #444;
+    transition: all .7s ease-in-out;
+}
+
+.course1 {
+    top: 5%;
+    /* left: 20%; */
+    transform: rotate(-45deg);
+}
+
+.course2 {
+    top: 2%;
+    left: 45%;
+    transform: rotate(40deg);
+}
+
+.course3 {
+    top: 37%;
+    left: 50%;
+    transform: rotate(55deg);
+}
+
+.course4 {
+    top: 37%;
+    /* left: 0%; */
+    transform: rotate(-38deg);
+}
+
+.course:hover {
+    transform: scale(1.3) rotateX(20deg);
+    z-index: 50;
+}
+
+/* c4l fixed bg  */ 
+.c4l {
+    margin-top: 100px;
+    height: 40vh;
+    background: url(../img/c4l-bg.jpg) fixed center no-repeat ;
+    background-size: 100% 100%;
+}
+
+/* most sold courses */
+
+.most-sold-courses {
+    background: url(../img/bg.jpg) center no-repeat ;
+    background-size: 100% 100%;
+}
+
+.course-card{
+    position: relative;
+    max-width: 420px;
+    overflow: hidden;
+    transition: all .3s;
+}
+
+.rotate{
+    perspective: 100rem;
+}
+
+.back { 
+    position: absolute;
+    top: -100%;
+    background: #fefefe;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    user-select: none;
+    pointer-events: none;
+    transform: rotateY(180deg);
+    transition: top .2s, opacity .5s;
+}
+
+.back-content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.rotate:hover .course-card{
+    transform: rotateY(180deg);
+}
+
+.rotate:hover .back{
+    opacity: 1;
+    top: 0;
+    user-select: auto;
+    pointer-events: auto;
+}
+
+
+.footer{
+    padding: 0 0;
+}
+.footer-card {
+    padding: 50px;
+    background-color: #1565C0;
+    color: #fff
+}
+
+a {
+    color: #fff
+}
+
+a:hover {
+    color: #fff
+}
+
